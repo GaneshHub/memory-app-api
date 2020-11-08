@@ -27,7 +27,7 @@ else{
   mongodbConnectionUrl = config.local.MONGO_DB_CONNECTION_URL;
 }
 mongoose
-  .connect(config.prod.MONGO_DB_CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(mongodbConnectionUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     app.listen(PORT, () => console.log(`SERVER RUNNING ON PORT ${PORT}`));
   })

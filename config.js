@@ -3,7 +3,7 @@ const config = {
         MONGO_DB_CONNECTION_URL: "mongodb://localhost:27017/test"
     },
     prod : {
-        MONGO_DB_CONNECTION_URL: "mongodb+srv://GaneshBandreddy:Ganesh@6666@cluster0.ktgrt.mongodb.net/test?retryWrites=true&w=majority"
+        MONGO_DB_CONNECTION_URL: `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0.ktgrt.mongodb.net/${process.env.MONGO_DB_NAME}?retryWrites=true&w=majority`
     }
 }
 
